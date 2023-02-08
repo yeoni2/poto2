@@ -1,0 +1,751 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Hahmlet-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html, body {
+    font-size: 16px; height: 100%;
+}
+/* 메뉴바와 이미지4개가 포함된 메인 box */
+.mainImg{
+    position: relative;
+    top: 0; left: 0;
+    width: 100%; height: 640px;
+    border: 0px solid black;
+}
+/* 상단 고정 메뉴바 box */
+.mainImg> .menuBar{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 6;
+    width: 100%; height: 40px;
+    border: 0px solid black;
+    display: flex;
+    background: white;
+}
+/* 상단 각 메뉴 box */
+.mainImg> .menuBar> div{
+    width: 8%; height: 100%;
+    border: 0px solid black;
+    text-align: center;
+    line-height: 40px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+/* 메뉴 글씨 위치조절 */
+.mainImg> .menuBar> div:first-child{
+    margin-left: 20px;
+}
+/* 메뉴 "Login" 위치,크기 조절 */
+.mainImg> .menuBar> div:nth-child(7){
+    width: 3%;
+    margin-left: 200px;
+}
+/* "/" 넓이 좁게  */
+.mainImg> .menuBar> div:nth-child(8){
+    width: 1%;
+}
+/* "join", 이모티콘 넓이 조절*/
+.mainImg> .menuBar> div:nth-child(9),
+.mainImg> .menuBar> div:nth-child(10),
+.mainImg> .menuBar> div:nth-child(11),
+.mainImg> .menuBar> div:nth-child(12){
+    width: 2%;
+}
+/* 이모티콘 위치 조절 */
+.mainImg> .menuBar> div:nth-child(10){
+    margin-left: 30px;
+}
+/* 상단 메뉴 글씨 */
+.mainImg> .menuBar> div> p{
+    cursor: pointer;
+    font-family: 'GmarketSansMedium';
+    font-size: 0.8rem;
+}
+/* 메뉴 마우스 오버 */
+.mainImg> .menuBar> div> p:hover,
+.mainImg> .menuBar> div> .sub> p:hover{
+   color:rgb(195, 193, 193);
+}
+.mainImg> .menuBar> div:nth-child(8)>p:hover{
+    cursor: default;
+    color: white;
+}
+/* 서브메뉴 */
+.mainImg> .menuBar> div> .sub{
+    margin-top: 3px;
+    background: black;
+    color: white;
+}
+/* 서브메뉴 menu_1 */
+.mainImg> .menuBar> div> .menu_1{
+    width: 100%; height: 140px;
+}
+/* 마우스오버시 menu_1 뜨기 */
+.mainImg> .menuBar> .firstmenu:hover{
+    height: 200px;
+}
+/* 서브메뉴 menu_2 */
+.mainImg> .menuBar> div> .menu_2{
+    width: 100%; height: 340px;
+}
+/* 마우스오버시  menu_2 뜨기 */
+.mainImg> .menuBar> .twomenu:hover{
+    height: 400px;
+}
+/* 서브메뉴 menu_3 */
+.mainImg> .menuBar> div> .menu_3{
+    width: 100%; height: 220px;
+}
+/* 마우스오버시  menu_3 뜨기 */
+.mainImg> .menuBar> .threemenu:hover{
+    height: 280px;
+}
+/* 서브메뉴 글씨 */
+.mainImg> .menuBar> div> .sub> p{
+    width: 100%; height: 40px;
+    line-height: 40px;
+    font-family: 'GmarketSansMedium';
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.mainImg> .menuBar> div> .menu_1> p:last-child{
+    line-height: 20px;
+    margin-top: 10px;
+}
+/* 상단 메뉴 로고이미지 */
+.mainImg> .menuBar> .logoImg{
+    position: relative;
+    top: 0; left: 3%;
+    width: 10%; height: 100%;
+    border: 0px solid black;
+    cursor: default;
+}
+.mainImg> .menuBar> .logoImg> .logo_1,
+.mainImg> .menuBar> .logoImg> .logo_2{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%; 
+}
+.mainImg> .menuBar> .logoImg> .logo_2{
+    display: none;
+}
+/* 상단메뉴 마우스오버 */
+.mainImg> .menuBar:hover{
+    background: black;
+    color: white;
+}
+/* 상단 메뉴 마우스 오버 할때 로고이미지 변경 */
+.mainImg> .menuBar:hover .logo_1{
+    display: none;
+}
+.mainImg> .menuBar:hover .logo_2{
+    display: block;
+}
+/* 로고이미지 크기 */
+.mainImg> .menuBar> .logoImg> div> img{
+    width: 100%; height: 100%;
+}
+/* 메인 이미지 */
+.mainImg> .mainImg_1,
+.mainImg> .mainImg_2,
+.mainImg> .mainImg_3,
+.mainImg> .mainImg_4,
+.mainImg> .mainImg_5{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+/* 메인이미지 크기 */
+.mainImg> .mainImg_1> img,
+.mainImg> .mainImg_2> img,
+.mainImg> .mainImg_3> img,
+.mainImg> .mainImg_4> img,
+.mainImg> .mainImg_5> img,
+.mainImg> .menuBar> div> img{
+    width: 100%; height: 100%;
+}
+/* 첫번째 메인이미지 */
+.mainImg> .mainImg_1{
+    z-index: 5;
+    animation: mainImg_1_ani 6s infinite linear;
+}
+@keyframes mainImg_1_ani{
+    0%{opacity: 1;}
+    10%{opacity: 1;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    40%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 0;}
+    70%{opacity: 0;}
+    80%{opacity: 0;}
+    90%{opacity: 0;}
+    100%{opacity: 0;}
+}
+/* 두번째 메인이미지 */
+.mainImg> .mainImg_2{
+    z-index: 4;
+    animation: mainImg_2_ani 6s infinite linear;
+}
+@keyframes mainImg_2_ani{
+    0%{opacity: 0;}
+    10%{opacity: 1;}
+    20%{opacity: 1;}
+    30%{opacity: 1;}
+    40%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 0;}
+    70%{opacity: 0;}
+    80%{opacity: 0;}
+    90%{opacity: 0;}
+    100%{opacity: 0;}
+}
+/* 세번째 메인이미지 */
+.mainImg> .mainImg_3{
+    z-index: 3;
+    animation: mainImg_3_ani 6s infinite linear;
+}
+@keyframes mainImg_3_ani{
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    20%{opacity: 0;}
+    30%{opacity: 1;}
+    40%{opacity: 1;}
+    50%{opacity: 1;}
+    60%{opacity: 1;}
+    70%{opacity: 0;}
+    80%{opacity: 0;}
+    90%{opacity: 0;}
+    100%{opacity: 0;}
+}
+/* 네번째 메인이미지 */
+.mainImg> .mainImg_4{
+    z-index: 2;
+    animation: mainImg_4_ani 6s infinite linear;
+}
+@keyframes mainImg_4_ani{
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    40%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 1;}
+    70%{opacity: 1;}
+    80%{opacity: 1;}
+    90%{opacity: 1;}
+    100%{opacity: 0;}
+}
+/* 다시 첫번째 메인이미지 */
+.mainImg> .mainImg_5{
+    z-index: 1;
+    animation: mainImg_5_ani 3s infinite linear;
+}
+@keyframes mainImg_5_ani{
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    40%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 0;}
+    70%{opacity: 0;}
+    80%{opacity: 0;}
+    90%{opacity: 1;}
+    100%{opacity: 1;}
+}
+/* 이미지3개 box */
+.Img3{
+    width: 100%; height: 470px;
+    border: 0px solid black;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+/* 이미지 들어가는 box 크기 */
+.Img3> article{
+    position: relative;
+    top: 0; left: 0;
+    width: 33%; height: 100%;
+    border: 0px solid black;
+}
+.Img3> article> div{
+    position: absolute;
+    top: 0; left: 0;
+}
+/* 이미지box와 이미지 크기 */
+.Img3> article> div,
+.Img3> article> div> img{
+    width: 100%; height: 100%;
+}
+/* 이미지에 마우스 오버했을때 해당 box 외 안보이기 */
+.Img3> article> div{
+    overflow: hidden;
+}
+.Img3> article> div:hover{
+    cursor: pointer;
+}
+/* 이미지 부드럽게 확대 */
+.Img3> article> div> img{
+    transition: all 0.6s;
+}
+/* 이미지 마우스 오버했을때  */
+.Img3> article> div:hover img{
+    transform: scale(1.1);
+}
+.Img3> article>p{
+    position: absolute;
+    left: 7%;
+    width: 80%;
+    color: white;
+    font-weight: 600;
+}
+.Img3> article>p:nth-child(2){
+    top: 340px;
+    font-size: 1.8rem;
+}
+.Img3> article>p:nth-child(3){
+    top: 400px;
+    font-size: 0.8rem;
+}
+.Img3> article>p:nth-child(4){
+    width: 90%;
+    top: 420px;
+    font-size: 0.8rem;
+}
+/* 이달의 신제품 box, 이달의 베스트 box */
+.new{
+    width: 30%; height: 60px;
+    margin-top: 130px;
+    margin-left: 35%;
+}
+.new> p,
+.mon_le_box> .month> p,
+.edition> p{
+    width: 100%;
+    text-align: center;
+}
+/* "이달의 신제품" 글씨, "이달의 베스트 아이템" 글씨 */
+.new> p:first-child,
+.mon_le_box> .month> p:first-child,
+.edition> p:first-child{
+    height: 20px;
+    font-size: 00.8rem;
+}
+/* "NEW ITEM" 글씨, "Best Sellers" 글씨 */
+.new> p:last-child,
+.mon_le_box> .month> p:last-child,
+.edition> p:last-child{
+    height: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+/* 신제품 이미지 box */
+.item_Img4{
+    width: 88%; height: 420px;
+    margin-top: 40px;
+    margin-left: 6%;
+    display: flex;
+    justify-content: space-between;
+}
+/* 신제품 각각의 이미지와 글씨 들어가는 box */
+.item_Img4> article{
+    width: 24%; height: 100%;
+}
+/* 이미지box */
+.item_Img4> article> div:first-child{
+    width: 100%; height: 330px;
+    cursor: pointer;
+}
+/* 이미지 크기 */
+.item_Img4> article> div:first-child> img{
+    width: 100%; height: 100%;
+}
+/* 제품 이름 */
+.item_Img4> article>.name{
+    width: 93%; height: 40px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 6px;
+}
+/* 제품 가격중 sale 금액 들어가는 box */
+.item_Img4> article> .sale{
+    width: 100%; height: 30px;
+    margin-top: 6px;
+    display: flex;
+}
+/* sale 금액 글씨와 일반 금액 글씨  */
+.item_Img4> article> .sale> p,
+.item_Img4> article> .place{
+    width: 20%; height: 100%;
+    font-size: 0.8rem;
+}
+/* 세일금액 글씨 색과 글씨 라인 */
+.item_Img4> article> .sale> p:first-child{
+    text-decoration:line-through;
+    color: gray;
+}
+/* 세일 안 들어간 일반 금액 margin 으로 위치조절 */
+.item_Img4> article> .place{
+    margin-top: 6px;
+}
+/* 슬라이드  background */
+.background{
+    width: 100%; height: 800px;
+    background: #E9E6E5;
+    margin-top: 100px;
+}
+/* 슬라이드 들어가는 box */
+.background> .slide{
+    position: relative;
+    top: 100px; left: 3%;
+    width: 94%; height: 600px;
+    overflow: hidden;
+}
+/* 움직이는 슬라이드(이미지6개) */
+.background> .slide> .at_slide{
+    position: absolute;
+    top: 0; left: 0;
+    width: 600%; height: 100%;
+    display: flex;
+    animation: atslide_ani 10s linear infinite; 
+}
+@keyframes atslide_ani {
+    0% {left: 0%;}
+    10%{left: -100%;}
+    20%{left: -100%;}
+    30%{left: -200%;}
+    40%{left: -200%;}
+    50%{left: -300%;}
+    60%{left: -300%;}
+    70%{left: -400%;}
+    80%{left: -400%;}
+    90%{left: -500%;}
+    100% {left: -500%;}
+}
+.background> .slide> .at_slide> div{
+    width: 17%; height: 100%;
+}
+.background> .slide> .at_slide> div> img{
+    width: 100%; height: 100%;
+}
+/* 이달의베스트상품 과 화살표 들어가는 box */
+.mon_le_box{
+    width: 100%; height: 60px;
+    margin-top: 130px;
+    display: flex;
+}
+.mon_le_box> .month{
+    width: 30%; height: 60px;
+    margin-left: 35%;
+}
+/* 화살표 2개 들어가는 box */
+.mon_le_box> .le_ri{
+    width: 10%; height: 40px;
+    margin-left: 17%;
+    display: flex;
+    justify-content: space-between;
+}
+/* 화살표 2개 각각의 box */
+.mon_le_box> .le_ri> div{
+    width: 46%; height: 100%;
+    border: 1px solid rgb(224, 217, 217);
+    color: rgb(224, 217, 217);
+}
+/* 화살표 마우스 오버했을때 */
+.mon_le_box> .le_ri> div:hover{
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}
+/* 화살표 이모티콘  */
+.mon_le_box> .le_ri> div> p{
+    width: 100%; height: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+/* 베스트 아이템 box */
+.best{
+    position: relative;
+    top: 40px; left: 6%;
+    width: 88%; height: 460px;
+    overflow: hidden;
+}
+/* 베스트 아이템 나열된 box */
+.best> .best_item_box{
+    position: absolute;
+    top: 0; left: 0;
+    width: 200%; height: 420px;
+    display: flex;
+}
+/* 각각의 아이템 들어가는 box */
+.best> .best_item_box> .item{
+    width: 24%; height: 100%;
+    margin-right: 1%;
+    cursor: pointer; 
+}
+/* 베스트아이템 이미지 box */
+.best> .best_item_box> .item> div:first-child{
+    width: 100%; height: 330px;
+}
+/* 베스트 이미지 크기 */
+.best> .best_item_box> .item> div:first-child> img
+{
+    width: 100%; height: 100%;
+}
+/* 베스트 아이템의 제품명 */
+.best> .best_item_box> .item> .item_name{
+    width: 93%; height: 40px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 6px;
+}
+/* 베스트 아이템 세일가격 */
+.best> .best_item_box> .item> .item_sale{
+    width: 100%; height: 30px;
+    margin-top: 10px;
+    display: flex;
+}
+/* 베스트 아이템 일반 가격과 세일가격의 글씨 */
+.best> .best_item_box> .item> .item_sale>p,
+.best> .best_item_box> .item> .item_place{
+    width: 20%; height: 100%;
+    font-size: 0.8rem;
+}
+/* 베스트 아이템 세일 전의 금액 글씨 */
+.best> .best_item_box> .item> .item_sale> p:first-child{
+    text-decoration:line-through;
+    color: gray;
+}
+/* 베스트 아이템 일반금액 */
+.best> .best_item_box> .item> .item_place{
+    margin-top: 6px;
+}
+/* 베스트 아이템 움직일 때 밑에 색깔 변화 */
+.best> .number{
+    position: absolute;
+    top: 420px; left: 40%;
+    width: 20%; height: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.best> .number> div{
+    width: 6%; height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    margin-top: 12px;
+}
+.best> .number> .one{
+    background: rgb(125, 124, 124);
+}
+/* 에디션 들어가는 box */
+.edition{
+    width: 30%; height: 60px;
+    margin-top: 100px;
+    margin-left: 35%;
+}
+/* 에디션 왼쪽 사진 */
+.purchase{
+    width: 64%; height: 490px;
+    margin-top: 30px;
+    margin-left: 18%;
+    display: flex;
+}
+/* 에디션 사진크기와 오른쪽 box */
+.purchase> .img,
+.purchase> .text{
+    width: 47%; height: 470px;
+}
+.purchase> .img> img{
+    width: 100%; height: 100%;
+}
+/* 오른쪽 box위치 */
+.purchase> .text{
+    margin-left: 6%;
+}
+/* 에디션 첫번째 box */
+.purchase> .text> .text_title{
+    width: 100%; height: 139px;
+    margin-top: 20px;
+}
+.purchase> .text> .text_title> p{
+    width: 100%; 
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+/* 에디션 금액 */
+.purchase> .text> .text_title> .title_sale{
+    width: 100%; 
+    font-weight: bold;
+    margin-top: 4px;
+    display: flex;
+}
+.purchase> .text> .text_title> .title_sale>p{
+    width: 17%;
+}
+.purchase> .text> .text_title> .title_sale>p:last-child{
+    text-decoration:line-through;
+    color: gray;
+}
+/* 에디션 두번째 box */
+.text> .text_place{
+    width: 100%; height: 130px;
+    display: flex;
+}
+/* 에디션 두번째 box 글씨 */
+.text> .text_place> p{
+    width: 30%; 
+    margin-top: 10px;
+    margin-left: 3%;
+    font-weight: bold;
+}
+/* 에디션 두번째 box 상품명 */
+.text> .text_place> p:first-child{
+    font-size: 0.8rem;
+}
+/* 에디션 두번째 box +,수량,- */
+.text_place> .place_number{
+    width: 30%; height: 30px;
+    margin-left: 3%;
+    margin-top: 30px;
+    display: flex;
+}
+.text_place> .place_number> p{
+    width: 33%; height: 100%;
+    border: 1px solid black;
+    line-height: 30px;
+    text-align: center;
+}
+/* 에디션 두번째 갯수 */
+.text> .text_place> p:last-child{
+    width: 20%;
+    margin-top: 30px;
+    margin-left: 13%;
+}
+/* 에디션 세번째 box */
+.text> .text_total{
+    width: 100%; 
+    display: flex;
+}
+/* 에디션 세번째 box "total" */
+.text> .text_total> p{
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 3%;
+    font-weight: bold;
+}
+/* 에디션 세번쨰 box 총금액 */
+.text> .text_total> p:last-child{
+    width: 20%;
+    margin-left: 37%;
+}
+/* "바로구매" */
+.text> .text_cart{
+    width: 100%;
+    display: flex;
+}
+/* 이모티콘 */
+.text> .text_cart>p:first-child{
+    width: 40%; height: 60px;
+    background: black;
+    color: white;
+}
+.text> .text_cart>p{
+    width: 20%; height: 60px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 3%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+/* 이모티콘 마우스오버했을때 */
+.text> .text_cart>p:nth-child(2):hover,
+.text> .text_cart>p:nth-child(3):hover{
+    border: 1px solid rgb(180, 171, 171);
+}
+/* 푸터시작 */
+.footer{
+    width: 100%; height: 400px;
+    border: 1px solid #ccc;
+    margin-top: 60px;
+}
+/* 상단 푸터 이미지와 글씨 */
+.footer> .first_footer{
+    width: 30%; height: 100px;
+    margin-top: 20px;
+}
+/* 푸터 로고 이미지  */
+.footer> .first_footer> div{
+    width: 30%; height: 30px;
+    margin-left: 10%;
+}
+.footer> .first_footer> div> img{
+    width: 100%; height: 100%;
+}
+/* 이미지 밑 글씨 */
+.footer> .first_footer> div:last-child{
+    width: 100%; height: 40px;
+}
+.footer> .first_footer> div:last-child> p{
+    width: 100%; height: 100%;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+/* 푸터 하단 목록 box */
+.footer> .two_footer{
+    width: 80%; height: 280px;
+    margin-left: 20%;
+    display: flex;
+}
+.footer> .two_footer> .list{
+    width: 30%; height: 100%;
+    margin-right: 2%;
+}
+.footer> .two_footer> .two{
+    width: 40%;
+}
+.footer> .two_footer> .three,
+.footer> .two_footer> .four{
+    width: 10%;
+}
+.footer> .two_footer> .list> p{
+    width: 100%; height: 30px;
+    color: rgb(93, 91, 91);
+    font-size: 0.8rem;
+}
+.footer> .two_footer> .list> p:nth-child(2){
+    margin-top: 20px;
+}
+.footer> .two_footer> .list> .bold{
+    font-weight: bold;
+    color: black;
+    font-size: 1rem;
+}
+/* top 클릭표시 */
+.top{
+    position: fixed;
+    top: 300px; left: 96%;
+    width: 3%; height: 40px;
+    border: 1px solid #ccc;
+}
+.top> p {
+    width: 100%; height: 100%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}

@@ -743,7 +743,7 @@ html, body {
 /* top 클릭표시 */
 .top{
     position: fixed;
-    top: 300px; left: 96%;
+    top: 400px; left: 96%;
     width: 3%; height: 40px;
     border: 1px solid #ccc;
 }

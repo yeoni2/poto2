@@ -629,6 +629,10 @@ html, body {
     line-height: 30px;
     text-align: center;
 }
+.text_place> .place_number> p:first-child,
+.text_place> .place_number> p:last-child{
+    cursor: pointer;
+}
 /* 에디션 두번째 갯수 */
 .text> .text_place> p:last-child{
     width: 20%;

@@ -1,0 +1,409 @@
+.mainImg,
+.Img3,
+.background,
+.best,
+.mon_le_box{
+    display: none;
+}
+.mobile_main,
+.mobile_arrow,
+.mobile_img3,
+.mobile_background,
+.bestItem,
+.bestItem8{
+    display: block;
+}
+/* 모바일버전의 메인이미지 box */
+.mobile_main{
+    position: relative;
+    top: 0; left: 0;
+    width: 100%; height: 640px;
+}
+/* 모바일버전 메뉴바 */
+.mobile_main> .mobile_menubar{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 40px;
+    background: white;
+    z-index: 5;
+    display: flex;
+}
+/* 모바일버전 왼쪽 메뉴 */
+.mobile_main> .mobile_menubar> .mobile_first{
+    width: 10%; height: 100%;
+    cursor: pointer;
+}
+.mobile_main> .mobile_menubar> .mobile_first> p{
+    width: 100%; height: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+/* 모바일버전 로고이미지 box */
+.mobile_main> .mobile_menubar>.mobile_trademark{
+    position: relative;
+    top: 10px; left: 22%;
+    width: 30%; height: 20px;
+    cursor: default;
+}
+.mobile_main> .mobile_menubar>.mobile_trademark> div{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%; 
+}
+/* 모바일버전 로고 이미지크기 */
+.mobile_main> .mobile_menubar>.mobile_trademark> div> img{
+    width: 100%; height: 100%;
+}
+/* 흰색글씨 로고 안보이게 하기,
+마우스 오버했을때 검정글씨 로고 안보이게 하기 */
+.mobile_main> .mobile_menubar>.mobile_trademark> .mobile_logo_two,
+.mobile_main> .mobile_menubar:hover .mobile_logo_one{
+    display: none;
+}
+/* 마우스 오버 했을때 검정글씨 로고 보이게 하기 */
+.mobile_main> .mobile_menubar:hover .mobile_logo_two{
+    display: block;
+}
+/* 마우스 오버했을 떄 배경색과 글씨색 */
+.mobile_main> .mobile_menubar:hover{
+    background: black;
+    color: white;
+}
+/* 모바일버전의 돋보기랑 쇼핑백 */
+.mobile_main> .mobile_menubar> .mobile_three,.mobile_main> .mobile_menubar> .mobile_four{
+    width: 7%; height: 100%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.mobile_main> .mobile_menubar> .mobile_three{
+    margin-left: 40%;
+}
+/* 모바일버전 메인 슬라이드 */
+.mobile_main> .mobileImg_1,
+.mobile_main> .mobileImg_2,
+.mobile_main> .mobileImg_3,
+.mobile_main> .mobileImg_4{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+.mobile_main> .mobileImg_1> img,
+.mobile_main> .mobileImg_2> img,
+.mobile_main> .mobileImg_3> img,
+.mobile_main> .mobileImg_4> img{
+    width: 100%; height: 100%;
+}
+.mobile_main> .mobileImg_1{
+    z-index: 4;
+    animation: mobileImg_1_ani 6s infinite linear;
+}
+@keyframes mobileImg_1_ani{
+    0%{opacity: 1;}
+    10%{opacity: 1;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    40%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 0;}
+    70%{opacity: 0;}
+    80%{opacity: 0;}
+    90%{opacity: 0;}
+    100%{opacity: 0;}
+}
+.mobile_main> .mobileImg_2{
+    z-index: 3;
+    animation: mobileImg_2_ani 6s infinite linear;
+}
+@keyframes mobileImg_2_ani{
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    20%{opacity: 1;}
+    30%{opacity: 1;}
+    40%{opacity: 1;}
+    50%{opacity: 0;}
+    60%{opacity: 0;}
+    70%{opacity: 0;}
+    80%{opacity: 0;}
+    90%{opacity: 0;}
+    100%{opacity: 0;}
+}
+.mobile_main> .mobileImg_3{
+    z-index: 2;
+    animation: mobileImg_3_ani 6s infinite linear;
+}
+@keyframes mobileImg_3_ani{
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    40%{opacity: 0;}
+    50%{opacity: 1;}
+    60%{opacity: 1;}
+    70%{opacity: 1;}
+    80%{opacity: 1;}
+    90%{opacity: 0;}
+    100%{opacity: 0;}
+}
+.mobile_main> .mobileImg_4{
+    z-index: 1;
+    animation: mobileImg_4_ani 6s infinite linear;
+}
+@keyframes mobileImg_4_ani{
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    40%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 0;}
+    70%{opacity: 0;}
+    80%{opacity: 0;}
+    90%{opacity: 1;}
+    100%{opacity: 1;}
+}
+.mobile_arrow{
+    width: 20%; height: 30px;
+    margin-top: 30px;
+    margin-left: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+.mobile_arrow> div{
+    width: 40%; height: 100%;
+    cursor: pointer;
+}
+.mobile_arrow> div> p {
+    width: 100%; height: 100%;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 30px;
+}
+.mobile_arrow> div:hover{
+    border: 1px solid black;
+}
+/* 이미지3개 */
+.mobile_img3{
+    position: relative;
+    top: 10px; left: 3%;
+    width: 240%; height: 330px;
+    display: flex;
+}
+/* 이미지와 글씨들어가는 box */
+.mobile_img3> article{
+    position: absolute;
+    top: 0; left: 0;
+    width: 30%; height: 100%;
+}
+.mobile_img3> article:nth-child(2){
+    left: 33%;
+}
+.mobile_img3> article:nth-child(3){
+    left: 66%;
+}
+/* 이미지 들어가는 box */
+.mobile_img3> article> div{
+    position: absolute;
+    top: 0; left: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+.mobile_img3> article> div> img{
+    transition: all 0.6s;
+}
+.mobile_img3> article> div,
+.mobile_img3> article> div> img{
+    width: 100%; height: 100%;
+}
+/* 이미지 들어가는 box 아무스오버했을 때 이미지 */
+.mobile_img3> article> div:hover img{
+    transform: scale(1.1);
+}
+/* 이미지 들어가는 글씨 */
+.mobile_img3> article> p{
+    position: absolute;
+    left: 7%;
+    width: 80%;
+    color: white;
+    font-weight: 400;
+}
+.mobile_img3> article>p:nth-child(2){
+    top: 220px;
+    font-size: 1.3rem;
+}
+.mobile_img3> article>p:nth-child(3){
+    top: 260px;
+    font-size: 0.8rem;
+}
+.mobile_img3> article>p:nth-child(4){
+    width: 90%;
+    top: 280px;
+    font-size: 0.8rem;
+}
+/* 신제품 이미지 box */
+.item_Img4{
+    width: 92%; height: 600px;
+    margin-left: 4%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.item_Img4> article{
+    width: 47%; height: 300px;
+}
+.item_Img4> article> div:first-child{
+    width: 100%; height: 200px;
+}
+.item_Img4> article>.name{
+    width: 100%; height: 40px;
+    font-size: 0.7rem;
+}
+.item_Img4> article> .sale> p,
+.item_Img4> article> .place{
+    width: 30%;
+}
+.mobile_background{
+    width: 100%; height: 800px;
+    background: #E9E6E5;
+    margin-top: 40px;
+}
+.mobile_background>.mobile_slide{
+    position: relative;
+    top: 100px; left: 3%;
+    width: 94%; height: 600px;
+    overflow: hidden;
+}
+.mobile_background>.mobile_slide>.mobile_article{
+    position: absolute;
+    top: 0; left: 0;
+    width: 600%; height: 100%;
+    display: flex;
+    animation: article_ani 10s linear infinite;
+}
+@keyframes article_ani {
+    0% {left: 0%;}
+    10%{left: -100%;}
+    20%{left: -100%;}
+    30%{left: -200%;}
+    40%{left: -200%;}
+    50%{left: -300%;}
+    60%{left: -300%;}
+    70%{left: -400%;}
+    80%{left: -400%;}
+    90%{left: -500%;}
+    100% {left: -500%;}
+}
+.mobile_background>.mobile_slide>.mobile_article> div{
+    width: 17%; height: 100%;
+}
+.mobile_background>.mobile_slide>.mobile_article> div> img{
+    width: 100%; height: 100%;
+}
+.bestItem{
+    width: 30%; height: 60px;
+    margin-top: 130px;
+    margin-left: 35%;
+}
+.bestItem> p{
+    width: 100%;
+    text-align: center;
+}
+.bestItem> p:first-child{
+    height: 20px;
+    font-size: 00.8rem;
+}
+.bestItem> p:last-child{
+    height: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.bestItem8{
+    width: 92%; height: 1200px;
+    margin-left: 4%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+.bestItem8>article{
+    width: 47%; height: 300px; 
+}
+.bestItem8> article> div:first-child{
+    width: 100%; height: 200px;
+}
+.bestItem8> article> div:first-child> img{
+    width: 100%; height: 100%;
+}
+.bestItem8> article>.mobile_name{
+    width: 100%; height: 40px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-top: 6px;
+}
+.bestItem8> article>.mobile_sale
+{
+    width: 100%; height: 30px;
+    margin-top: 6px;
+    display: flex;
+}
+.bestItem8> article>.mobile_sale>p,
+.bestItem8> article>.mobile_place{
+    width: 30%; height: 100%;
+    font-size: 0.8rem;
+}
+.bestItem8> article>.mobile_sale>p:first-child{
+    text-decoration:line-through;
+    color: gray;
+}
+.edition{
+    width: 100%;
+    margin-top: 60px;
+    margin-left: 0;
+}
+.purchase{
+    width: 94%; height: 1000px;
+    margin-left: 3%;
+    flex-wrap: wrap;
+}
+.purchase> .img,
+.purchase> .text{
+    width: 100%;
+}
+.purchase> .text{
+    margin-left: 0%;
+}
+.purchase> .text> .text_title{
+    width: 100%; height: 100px;
+    margin-top: 6px;
+}
+.footer{
+    margin-top: 0;
+    height: 800px;
+}
+.footer> .first_footer{
+    width: 100%; height: 100px;
+    margin-top: 20px;
+}
+.footer> .two_footer{
+    width: 90%; height: 600px;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer> .two_footer> .list{
+    width: 100%; height: 200px;
+    margin-right: 0;
+}
+.footer> .two_footer> .second,
+.footer> .two_footer> .three,
+.footer> .two_footer> .four{
+    height: 160px;
+}
+.footer> .two_footer> .list> p{
+    width: 100%; height: 20px;
+    color: rgb(93, 91, 91);
+    font-size: 0.8rem;
+}
+.top{
+    top: 600px; left: 90%;
+    width: 6%;
+}

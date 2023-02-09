@@ -1,5 +1,6 @@
-let left_sw=0, count=1;
+let left_sw=0, right_sw=0, count=1;
 let minus,num,sum,total,aggregate,buy;
+let left, right,pass1,pass2,pass3;
 window.onload =function(){
     $(".top").on("click", function() {   
         $("html, body").animate({"scrollTop": "0"},500);
@@ -15,6 +16,11 @@ window.onload =function(){
     aggregate=document.querySelector(".aggregate");
     aggregate.innerHTML="10,900원"
     buy=document.querySelector(".buy");
+    left=document.querySelector(".left");
+    right=document.querySelector(".right");
+    pass1=document.querySelector(".pass1");
+    pass2=document.querySelector(".pass2");
+    pass3=document.querySelector(".pass3");
 
     sum.addEventListener('click', () => {
         count += 1;
@@ -36,6 +42,7 @@ window.onload =function(){
     buy.addEventListener("click",()=>{
         alert("테스트 입니다.")
     })
+
 }
 function comma(str) {
     str = String(str);
@@ -74,6 +81,38 @@ $(function(){
         }
 
     })
+    $(".left").on("click", function(){
+        if(left_sw==0){
+            $(".mobile_img3").animate({"left":"-=70%"},100);
+            left_sw=1;
+            right_sw=1;
+        }
+        else if(left_sw==1){
+            $(".mobile_img3").animate({"left":"-=70%"},100);
+            left_sw=2;
+            right_sw=2;
+        }
+        else{
+            $(".mobile_img3").animate({"left":"-=0%"},100);
+        }
+    })
+    $(".right").on("click", function(){
+        if(right_sw==0){
+            $(".mobile_img3").animate({"left":"-=0%"},100);
+            left_sw=0;
+        }
+        else if(right_sw==1){
+            $(".mobile_img3").animate({"left":"+=70%"},100);
+            right_sw=0;
+            left_sw=1;
+        }
+        else{
+            $(".mobile_img3").animate({"left":"+=70%"},100);
+            right_sw=1;
+        }
+    })
+
+
 })
 
 

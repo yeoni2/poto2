@@ -10,7 +10,8 @@
 .mobile_img3,
 .mobile_background,
 .bestItem,
-.bestItem8{
+.bestItem8,
+.mobile_detailMenu{
     display: block;
 }
 /* 모바일버전의 클릭메뉴 */

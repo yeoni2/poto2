@@ -13,6 +13,132 @@
 .bestItem8{
     display: block;
 }
+/* 모바일버전의 클릭메뉴 */
+.mobile_detailMenu{
+    position: fixed;
+    top: 0; left: -60%;
+    width: 60%; height: 700px;
+    background: white;
+    z-index: 6;
+}
+/* 모바일 메뉴 닫기버튼 */
+.mobile_detailMenu> .clos{
+    width: 20%; height: 40px;
+    margin-top: 40px;
+    margin-left: 70%;
+    cursor: pointer;
+}
+.mobile_detailMenu> .clos> p{
+    width: 100%; height: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.3rem;
+}
+/* 첫번째 작은글씨와 로그인이 들어가는 box */
+.mobile_detailMenu> .detail_first{
+    width: 80%; height: 100px;
+    margin-left: 10%;
+}
+/* 회색 작은 글씨 */
+.mobile_detailMenu> .detail_first> p:first-child{
+    font-size: 0.8rem;
+    color: gray;
+}
+/* 로그인과 아이콘 들어가는 box */
+.mobile_detailMenu> .detail_first> .login{
+    width: 100%; height: 40px;
+    margin-top: 10px;
+    display: flex;
+}
+/* 로그인 글씨 */
+.mobile_detailMenu> .detail_first> .login>:first-child{
+    width: 30%;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+/* 로그인 옆 아이콘 */
+.mobile_detailMenu> .detail_first> .login>:last-child{
+    width: 10%;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+/* 메인글씨 box */
+.mobile_detailMenu> .mainmenu{
+    position: relative;
+    top: 0; left: 0;
+    width: 100%; height: 70px;
+    border: 1px solid rgb(223, 223, 223);
+}
+.mobile_detailMenu> .event{
+    width: 100%; height: 70px;
+    border: 1px solid rgb(223, 223, 223);
+}
+/* 글씨 아이콘 box */
+.mobile_detailMenu> .mainmenu>p{
+    position: absolute;
+    cursor: pointer;
+}
+.mobile_detailMenu> .event> p{
+    width: 30px;
+    margin-top: 20px;
+    margin-left: 10%;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+/* 메인 글씨 */
+.mobile_detailMenu> .mainmenu>p:first-child{
+    top: 20px; left: 10%;
+    width: 30%; 
+    font-size: 1.3rem;
+}
+/* 아이콘위치 */
+.mobile_detailMenu> .mainmenu>p:nth-child(2),
+.mobile_detailMenu> .mainmenu>p:last-child{
+    top: 24px; left: 80%;
+    width: 10%;
+}
+/* 클릭시 나타나는 아이콘 안보이게 하기 */
+.mobile_detailMenu> .mainmenu>p:last-child{
+    display: none;
+}
+ /* 서브메뉴  */ 
+.mobile_detailMenu> .submenu{
+    width: 100%; 
+    background: #F9F9F9;
+}
+/* 브랜드 클릭하면 나오는 글씨 */
+.mobile_detailMenu> .submenu> p{
+    width: 80%; height: 40px;
+    line-height: 40px;
+    margin-left: 10%;
+    color: #BDBDBD;
+}
+.mobile_detailMenu> .brand{
+    height: 130px;
+}
+.mobile_detailMenu> .shop{
+    height: 340px;
+}
+.mobile_detailMenu> .Community{
+    height: 200px;
+}
+/* 모바일 메뉴 맨밑 작은 글씨 */
+.mobile_detailMenu> .small{
+    position: absolute;
+    top: 660px; left: 0;
+    z-index: 2;
+    width: 100%; height: 40px;
+    background: white;
+    display: flex;
+}
+.mobile_detailMenu> .small> p{
+    width: 20%; height: 100%;
+    line-height: 40px;
+    margin-left: 6%;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
 /* 모바일버전의 메인이미지 box */
 .mobile_main{
     position: relative;
@@ -162,6 +288,7 @@
     90%{opacity: 1;}
     100%{opacity: 1;}
 }
+/* 이미지3개 상단의 방향키 */
 .mobile_arrow{
     width: 20%; height: 30px;
     margin-top: 30px;
@@ -261,6 +388,7 @@
 .item_Img4> article> .place{
     width: 30%;
 }
+/* 모바일 슬라이드 */
 .mobile_background{
     width: 100%; height: 800px;
     background: #E9E6E5;
@@ -298,6 +426,7 @@
 .mobile_background>.mobile_slide>.mobile_article> div> img{
     width: 100%; height: 100%;
 }
+/* 베스트 아이템 */
 .bestItem{
     width: 30%; height: 60px;
     margin-top: 130px;
@@ -354,6 +483,7 @@
     text-decoration:line-through;
     color: gray;
 }
+/* 에디션 */
 .edition{
     width: 100%;
     margin-top: 60px;
@@ -375,6 +505,7 @@
     width: 100%; height: 100px;
     margin-top: 6px;
 }
+/* 푸터 */
 .footer{
     margin-top: 0;
     height: 800px;
@@ -403,6 +534,7 @@
     color: rgb(93, 91, 91);
     font-size: 0.8rem;
 }
+/* 상단으로 올라가는 버튼 */
 .top{
     top: 600px; left: 90%;
     width: 6%;

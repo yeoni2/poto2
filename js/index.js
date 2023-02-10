@@ -81,6 +81,7 @@ $(function(){
         }
 
     })
+    // 이미지3개 넘어가는 왼쪽버튼
     $(".left").on("click", function(){
         if(left_sw==0){
             $(".mobile_img3").animate({"left":"-=70%"},100);
@@ -96,6 +97,7 @@ $(function(){
             $(".mobile_img3").animate({"left":"-=0%"},100);
         }
     })
+    // 이미지 3개 넘기는 오른쪽버튼
     $(".right").on("click", function(){
         if(right_sw==0){
             $(".mobile_img3").animate({"left":"-=0%"},100);
@@ -111,8 +113,41 @@ $(function(){
             right_sw=1;
         }
     })
-
-
+    // 모바일 메뉴 클릭했을 때 오른쪽을 나타나기
+    $(".mobile_first").on("click", function(){
+        $(".mobile_detailMenu").animate({"left":"+=60%"},100);
+    })
+    // 모바일 메뉴 닫기
+    $(".clos").on("click", function(){
+        $(".mobile_detailMenu").animate({"left":"-=60%"},100);
+    })
+    // 상세메뉴 슬라이드 업
+    $(".submenu").slideUp();
+    // 모바일 메뉴 의 메인메뉴 클릭했을때 상세메뉴 뜨기
+    $(".mainmenu").on("click", function(){
+        $(".submenu").slideUp();
+        if ($(this).next().css("display") == "none") {
+            $(this).next().slideDown();
+        }
+        else {            
+            $(".submenu").slideUp();
+        }
+        
+    })
+    // 모바일 메뉴 클릭했을때 바뀌는 방향키
+    for(let i=0; i<4; i++){
+        $(".down"+i).on("click", function(){
+            $(".down"+i).css("display","none");
+            $(".up"+i).css("display","block");
+        })
+    }
+    for(let i=0; i<4; i++){
+        $(".up"+i).on("click", function(){
+            $(".up"+i).css("display","none");
+            $(".down"+i).css("display","block");
+        })
+    }
+    
 })
 
 

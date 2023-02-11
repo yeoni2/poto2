@@ -18,14 +18,15 @@
 .mobile_detailMenu{
     position: fixed;
     top: 0; left: -60%;
-    width: 60%; height: 700px;
+    width: 60%; height: 740px;
     background: white;
+    overflow: hidden;
     z-index: 6;
 }
 /* 모바일 메뉴 닫기버튼 */
 .mobile_detailMenu> .clos{
     width: 20%; height: 40px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 70%;
     cursor: pointer;
 }
@@ -122,7 +123,7 @@
     height: 340px;
 }
 .mobile_detailMenu> .Community{
-    height: 200px;
+    height: 240px;
 }
 /* 모바일 메뉴 맨밑 작은 글씨 */
 .mobile_detailMenu> .small{
